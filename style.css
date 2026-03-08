@@ -1,13 +1,55 @@
-.glass-nav {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
+.roadmap-wrapper {
+    position: relative;
+    text-align: center;
+    margin: 50px 0;
 }
-.gradient-text {
-    background: linear-gradient(45deg, #00dbde, #fc00ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+.main-roadmap-btn {
+    padding: 15px 40px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+}
+
+.sub-buttons {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; 
+}
+
+
+.nav-btn {
+    position: absolute;
+    width: 150px; height: 50px;
+    background: #1e40af;
+    color: white;
+    border: 1px solid #38bdf8;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+
+.roadmap-active .nav-btn:nth-child(1) { transform: translate(-180px, 80px); opacity: 1; }
+.roadmap-active .nav-btn:nth-child(2) { transform: translate(0px, 150px); opacity: 1; }
+.roadmap-active .nav-btn:nth-child(3) { transform: translate(180px, 80px); opacity: 1; }
+
+.target-section {
+    margin: 100px 10%;
+    padding: 50px;
+    display: none; 
+}
+
+
+.plane-anim {
+    position: fixed;
+    font-size: 24px;
+    z-index: 9999;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
