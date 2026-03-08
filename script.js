@@ -1,35 +1,36 @@
 function toggleRoadmap() {
-    const wrapper = document.querySelector('.roadmap-wrapper');
-    const subButtons = document.getElementById('subButtons');
-    subButtons.style.display = 'block';
-    wrapper.classList.toggle('roadmap-active');
+    document.querySelector('.roadmap-container').classList.toggle('roadmap-active');
 }
 
-function flyTo(targetId) {
-   
+function planeFly(btn, targetId) {
     const section = document.querySelector(targetId);
-    section.style.display = 'block'; 
+    section.style.display = 'block';
+
+   
     const plane = document.createElement('div');
-    plane.innerHTML = '✈️';
-    plane.className = 'plane-anim';
+    plane.innerHTML = '✈️'; 
+    plane.className = 'plane-arrow';
     document.body.appendChild(plane);
 
-    const btn = event.target.getBoundingClientRect();
-    plane.style.left = btn.left + 'px';
-    plane.style.top = btn.top + 'px';
+    
+    const rect = btn.getBoundingClientRect();
+    plane.style.left = (rect.left + rect.width / 2) + 'px';
+    plane.style.top = rect.top + 'px';
 
    
     setTimeout(() => {
-        plane.style.left = '50%';
-        plane.style.top = '90vh';
+        plane.style.transform = 'translateY(500px) rotate(45deg) scale(0.5)';
         plane.style.opacity = '0';
         
+       
         window.scrollTo({
-            top: section.offsetTop - 100,
+            top: section.offsetTop - 50,
             behavior: 'smooth'
         });
-    }, 100);
+    }, 50);
 
    
-    setTimeout(() => plane.remove(), 700);
+    setTimeout(() => plane.remove(), 800);
 }
+   
+    
