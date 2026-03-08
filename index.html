@@ -1,16 +1,22 @@
-<header>
-    <nav class="glass-nav">
-        <div class="logo">MTIT.dev</div>
-        <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#writing">Poetry</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<div class="roadmap-wrapper">
+    <button class="main-roadmap-btn" onclick="toggleRoadmap()">Roadmap View</button>
+    
+    <div class="sub-buttons" id="subButtons">
+        <button class="nav-btn" onclick="flyTo('#cost-benefit')">Cost-Benefit</button>
+        <button class="nav-btn" onclick="flyTo('#gantt-chart')">Gantt Chart</button>
+        <button class="nav-btn" onclick="flyTo('#functionality')">Modules</button>
+    </div>
+</div>
 
-<section class="hero-section">
-    <h1 class="gradient-text">CSE Student & Software Developer</h1>
-    <p>Building the future with code and creativity.</p>
-    <button class="btn-premium">View GitHub</button>
-</section>
+<section id="cost-benefit" class="target-section glass">
+    <h3>Cost-Benefit Analysis</h3>
+    <p>Net Benefit: <span class="highlight">37,000 BDT</span></p>
+    </section>
+
+<section id="gantt-chart" class="target-section glass">
+    <h3>Gantt Chart Graph</h3>
+    </section>
+
+<section id="functionality" class="target-section glass">
+    <h3>Functionality Grouping</h3>
+    </section>
