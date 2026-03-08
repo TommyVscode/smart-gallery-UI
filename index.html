@@ -1,25 +1,58 @@
-<div class="roadmap-wrapper">
-    <button class="main-roadmap-btn" onclick="toggleRoadmap()">Roadmap View</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarikul Islam | SEU Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
     
-    <div class="sub-buttons" id="subButtons">
-        <button class="nav-btn" onclick="flyTo('#cost-benefit')">Cost-Benefit</button>
-        <button class="nav-btn" onclick="flyTo('#gantt-chart')">Gantt Chart</button>
-        <button class="nav-btn" onclick="flyTo('#functionality')">Modules</button>
-    </div>
-</div>
+    <nav class="navbar">
+        <div class="seu-info">
+            <img src="https://i.ibb.co/vzS8k2m/seu-logo.png" alt="SEU Logo" class="seu-logo">
+            <div>
+                <h3>Tarikul Islam Tamim</h3>
+                <p>ID: 2024000000257 | CSE Student</p>
+            </div>
+        </div>
+        <div class="startup-badge">Smart Gallery Startup</div>
+    </nav>
 
-<section id="cost-benefit" class="target-section glass">
-    <h3>Cost-Benefit Analysis</h3>
-    <p>Net Benefit: <span class="highlight">37,000 BDT</span></p>
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Building the Future of <span>Media Management</span></h1>
+            <div class="roadmap-container">
+                <button class="main-btn" onclick="toggleRoadmap()">Roadmap View</button>
+                <div class="sub-buttons" id="subButtons">
+                    <button class="nav-btn" onclick="planeFly(this, '#cost-benefit')">Cost-Benefit</button>
+                    <button class="nav-btn" onclick="planeFly(this, '#gantt-chart')">Gantt Chart</button>
+                    <button class="nav-btn" onclick="planeFly(this, '#functionality')">Modules</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="cost-benefit" class="glass-section">
+        <h2>Cost-Benefit Analysis</h2>
+        <div class="stat-card">Net Benefit: <span class="highlight">37,000 BDT</span></div>
     </section>
 
-<section id="gantt-chart" class="target-section glass">
-    <h3>Gantt Chart Graph</h3>
+    <section id="gantt-chart" class="glass-section">
+        <h2>Gantt Chart Roadmap</h2>
+        <div class="timeline-bar">9-Week Project Cycle</div>
     </section>
 
-<section id="functionality" class="target-section glass">
-    <h3>Functionality Grouping</h3>
+    <section id="functionality" class="glass-section">
+        <h2>Functionality Grouping</h2>
+        <div class="module-grid">
+            <div class="module">User Management</div>
+            <div class="module">Smart Gallery Logic</div>
+        </div>
     </section>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
