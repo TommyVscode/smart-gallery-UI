@@ -3,55 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarikul Islam | SEU Portfolio</title>
+    <title>Smart Gallery Organizer | Project Skeleton</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="background-animation"></div>
-    
-    <nav class="navbar">
-        <div class="seu-info">
-            <img src="https://i.ibb.co/vzS8k2m/seu-logo.png" alt="SEU Logo" class="seu-logo">
-            <div>
-                <h3>Tarikul Islam Tamim</h3>
-                <p>ID: 2024000000257 | CSE Student</p>
+    <div class="bg-glow"></div>
+
+    <nav class="main-nav">
+        <div class="seu-brand">
+            <img src="https://i.ibb.co/vzS8k2m/seu-logo.png" alt="SEU" class="seu-logo">
+            <div class="student-meta">
+                <span class="name">Tarikul Islam Tamim</span>
+                <span class="id">ID: 2024000000257 | CSE</span>
             </div>
         </div>
-        <div class="startup-badge">Smart Gallery Startup</div>
+        <div class="project-status">Development Phase: Skeleton v1.0</div>
     </nav>
 
-    <main class="hero">
-        <div class="hero-content">
-            <h1>Building the Future of <span>Media Management</span></h1>
-            <div class="roadmap-container">
-                <button class="main-btn" onclick="toggleRoadmap()">Roadmap View</button>
-                <div class="sub-buttons" id="subButtons">
-                    <button class="nav-btn" onclick="planeFly(this, '#cost-benefit')">Cost-Benefit</button>
-                    <button class="nav-btn" onclick="planeFly(this, '#gantt-chart')">Gantt Chart</button>
-                    <button class="nav-btn" onclick="planeFly(this, '#functionality')">Modules</button>
-                </div>
+    <header class="hero-section">
+        <div class="hero-text">
+            <h1 class="glitch">Smart Gallery <span>Organizer</span></h1>
+            <p>Automated Image Classification & Management System</p>
+        </div>
+
+        <div class="roadmap-module">
+            <button class="trigger-btn" onclick="toggleRoadmap()">Roadmap View</button>
+            <div class="node-cluster" id="nodeCluster">
+                <button class="node" onclick="initiateFlight(this, '#cost-analysis')">Cost-Benefit</button>
+                <button class="node" onclick="initiateFlight(this, '#gantt-chart')">Gantt Chart</button>
+                <button class="node" onclick="initiateFlight(this, '#module-map')">Functionality</button>
             </div>
         </div>
+    </header>
+
+    <main class="content-area">
+        <section id="cost-analysis" class="data-glass">
+            <div class="card-header">Cost-Benefit Analysis</div>
+            <div class="card-body">
+                <p>Strategic financial outlook for the startup. Estimated Net Benefit: <span class="highlight">37,000 BDT</span></p>
+            </div>
+        </section>
+
+        <section id="gantt-chart" class="data-glass">
+            <div class="card-header">Gantt Chart Roadmap</div>
+            <div class="card-body">
+                <p>9-Week Project Execution Cycle (March - June 2026).</p>
+            </div>
+        </section>
+
+        <section id="module-map" class="data-glass">
+            <div class="card-header">Functionality Grouping</div>
+            <div class="card-body">
+                <div class="module-tags">
+                    <span>User Management</span>
+                    <span>AI Gallery Logic</span>
+                    <span>System Design</span>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <section id="cost-benefit" class="glass-section">
-        <h2>Cost-Benefit Analysis</h2>
-        <div class="stat-card">Net Benefit: <span class="highlight">37,000 BDT</span></div>
-    </section>
-
-    <section id="gantt-chart" class="glass-section">
-        <h2>Gantt Chart Roadmap</h2>
-        <div class="timeline-bar">9-Week Project Cycle</div>
-    </section>
-
-    <section id="functionality" class="glass-section">
-        <h2>Functionality Grouping</h2>
-        <div class="module-grid">
-            <div class="module">User Management</div>
-            <div class="module">Smart Gallery Logic</div>
-        </div>
-    </section>
 
     <script src="script.js"></script>
 </body>
